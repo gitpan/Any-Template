@@ -4,7 +4,7 @@
 # Purpose : Unit test for Any::Template
 # Author  : John Alden
 # Created : Dec 04
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/any_template.t,v 1.5 2005/04/27 09:04:19 tonyh Exp $
+# CVS     : $Header: /home/cvsroot/any_template/t/any_template.t,v 1.5 2005/04/27 09:04:19 tonyh Exp $
 ###############################################################################
 #
 # -t Trace

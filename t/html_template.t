@@ -4,7 +4,7 @@
 # Purpose : Unit test for Any::Template::Backend::HTML::Template
 # Author  : Tony Henness(e)y
 # Created : Mar 05
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/html_template.t,v 1.1 2005/04/26 14:31:02 tonyh Exp $
+# CVS     : $Header: /home/cvsroot/any_template/t/html_template.t,v 1.1 2005/04/26 14:31:02 tonyh Exp $
 ###############################################################################
 #
 # -t Trace

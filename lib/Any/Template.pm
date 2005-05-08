@@ -2,7 +2,7 @@
 # Purpose : Consistent interface to templating modules
 # Author  : John Alden
 # Created : Dec 2004
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/lib/Any/Template.pm,v 1.11 2005/04/27 09:01:38 tonyh Exp $
+# CVS     : $Header: /home/cvsroot/any_template/lib/Any/Template.pm,v 1.12 2005/05/08 15:11:59 johna Exp $
 ###############################################################################
 
 package Any::Template;
@@ -13,7 +13,7 @@ use File::Spec;
 use File::Find;
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.11 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.12 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my($class, $options) = @_;
@@ -258,17 +258,11 @@ L<Text::Template>
 
 =head1 VERSION
 
-$Revision: 1.11 $ on $Date: 2005/04/27 09:01:38 $ by $Author: tonyh $
+$Revision: 1.12 $ on $Date: 2005/05/08 15:11:59 $ by $Author: johna $
 
 =head1 AUTHOR
 
 John Alden <cpan _at_ bbc _dot_ co _dot_ uk>
-
-=head1 TO DO
-
- - final decision on namespace
- - enhance unit tests to try out an option for each backend
- - Allow backend options to be passed in the process method??
 
 =head1 COPYRIGHT
 
