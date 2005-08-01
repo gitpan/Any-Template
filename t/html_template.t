@@ -4,7 +4,7 @@
 # Purpose : Unit test for Any::Template::Backend::HTML::Template
 # Author  : Tony Henness(e)y
 # Created : Mar 05
-# CVS     : $Header: /home/cvsroot/any_template/t/html_template.t,v 1.1 2005/04/26 14:31:02 tonyh Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/html_template.t,v 1.2 2005/07/25 15:20:37 simonf Exp $
 ###############################################################################
 #
 # -t Trace
@@ -17,7 +17,6 @@ use strict;
 BEGIN{ unshift @INC, "../lib" };;
 use Log::Trace;
 use Getopt::Std;
-use IO::Scalar;
 use File::Spec;
 use File::Path;
 

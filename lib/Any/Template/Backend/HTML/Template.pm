@@ -1,12 +1,13 @@
 package Any::Template::Backend::HTML::Template;
 
+use strict;
 use HTML::Template;
 use Any::Template::Backend;
 use vars qw(@ISA);
 @ISA = qw(Any::Template::Backend);
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.6 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.7 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my ($class, $options) = @_;
@@ -86,7 +87,7 @@ L<Any::Template>, L<Any::Template::Backend>, L<HTML::Template>
 
 =head1 VERSION
 
-$Revision: 1.6 $ on $Date: 2005/02/07 17:20:10 $ by $Author: johna $
+$Revision: 1.7 $ on $Date: 2005/05/08 18:25:17 $ by $Author: johna $
 
 =head1 AUTHOR
 

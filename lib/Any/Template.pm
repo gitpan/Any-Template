@@ -2,7 +2,7 @@
 # Purpose : Consistent interface to templating modules
 # Author  : John Alden
 # Created : Dec 2004
-# CVS     : $Header: /home/cvsroot/any_template/lib/Any/Template.pm,v 1.12 2005/05/08 15:11:59 johna Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/any_template/lib/Any/Template.pm,v 1.13 2005/07/21 12:18:40 piersk Exp $
 ###############################################################################
 
 package Any::Template;
@@ -13,7 +13,7 @@ use File::Spec;
 use File::Find;
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.12 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.13 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my($class, $options) = @_;
@@ -111,17 +111,17 @@ Any::Template - provide a consistent interface to a wide array of templating lan
 =head1 SYNOPSIS
 
 	use Any::Template;
-	my $template = new Any::Template(
+	my $template = new Any::Template({
 		Backend => 'HTML::Template',
 		Filename => 'page.tmpl',
 		Options => {'strict' => 0}
-	);	
+	});
 	my $output = $template->process($data);
 
-	my $template2 = new Any::Template(
+	my $template2 = new Any::Template({
 		Backend => 'Text::Template',
 		String => $template2_content
-	);	
+	});
 	$template->process($data, \*STDOUT);
 
 =head1 DESCRIPTION
@@ -258,7 +258,7 @@ L<Text::Template>
 
 =head1 VERSION
 
-$Revision: 1.12 $ on $Date: 2005/05/08 15:11:59 $ by $Author: johna $
+$Revision: 1.13 $ on $Date: 2005/07/21 12:18:40 $ by $Author: piersk $
 
 =head1 AUTHOR
 

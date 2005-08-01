@@ -1,7 +1,9 @@
 package Any::Template::Backend;
 
+use strict;
+
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.7 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.8 $ =~ /: (\d+)\.(\d+)/;
 
 sub process_to_file {
 	my ($self, $data, $filepath) = @_;
@@ -101,7 +103,7 @@ and process_to_filehandle will be used to populate it.
 
 =head1 VERSION
 
-$Revision: 1.7 $ on $Date: 2005/03/23 12:13:07 $ by $Author: tonyh $
+$Revision: 1.8 $ on $Date: 2005/05/08 18:25:16 $ by $Author: johna $
 
 =head1 AUTHOR
 

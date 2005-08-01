@@ -1,12 +1,13 @@
 package Any::Template::Backend::Text::MicroMason;
 
+use strict;
 use Text::MicroMason;
 use Any::Template::Backend;
 use vars qw(@ISA);
 @ISA = qw(Any::Template::Backend);
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.5 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.6 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my ($class, $options) = @_;
@@ -101,7 +102,7 @@ L<Any::Template>, L<Any::Template::Backend>, L<Text::MicroMason>
 
 =head1 VERSION
 
-$Revision: 1.5 $ on $Date: 2005/02/07 17:20:10 $ by $Author: johna $
+$Revision: 1.6 $ on $Date: 2005/05/08 18:25:18 $ by $Author: johna $
 
 =head1 AUTHOR
 
