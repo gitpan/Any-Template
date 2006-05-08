@@ -7,7 +7,7 @@ use vars qw(@ISA);
 @ISA = qw(Any::Template::Backend);
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.6 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.7 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my ($class, $options) = @_;
@@ -102,7 +102,7 @@ L<Any::Template>, L<Any::Template::Backend>, L<Text::MicroMason>
 
 =head1 VERSION
 
-$Revision: 1.6 $ on $Date: 2005/05/08 18:25:18 $ by $Author: johna $
+$Revision: 1.7 $ on $Date: 2006/05/08 12:28:00 $ by $Author: mattheww $
 
 =head1 AUTHOR
 
@@ -115,3 +115,5 @@ John Alden <cpan _at_ bbc _dot_ co _dot_ uk>
 See the file COPYING in this distribution, or http://www.gnu.org/licenses/gpl.txt 
 
 =cut
+
+# vim:noet

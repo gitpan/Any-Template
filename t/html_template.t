@@ -4,7 +4,7 @@
 # Purpose : Unit test for Any::Template::Backend::HTML::Template
 # Author  : Tony Henness(e)y
 # Created : Mar 05
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/html_template.t,v 1.2 2005/07/25 15:20:37 simonf Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/html_template.t,v 1.3 2006/05/08 12:28:00 mattheww Exp $
 ###############################################################################
 #
 # -t Trace
@@ -34,7 +34,7 @@ use vars qw($opt_t $opt_T $opt_s);
 getopts("tTs");
 
 #Move into the t directory
-chdir($1) if($0 =~ /(.*)\/(.*)/);
+chdir($1) if($0 =~ /(.*)(\/|\\)(.*)/);
 
 #Log::Trace
 import Log::Trace qw(print) if($opt_t);

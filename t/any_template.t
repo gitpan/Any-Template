@@ -4,7 +4,7 @@
 # Purpose : Unit test for Any::Template
 # Author  : John Alden
 # Created : Dec 04
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/any_template.t,v 1.6 2005/07/25 15:20:37 simonf Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/any_template/t/any_template.t,v 1.7 2006/05/08 12:28:00 mattheww Exp $
 ###############################################################################
 #
 # -t Trace
@@ -48,7 +48,7 @@ my @backends = grep {
 plan tests => 3 + 11*scalar @backends;
 
 #Move into the t directory
-chdir($1) if($0 =~ /(.*)\/(.*)/);
+chdir($1) if($0 =~ /(.*)(\/|\\)(.*)/);
 
 #Compilation
 require Any::Template;

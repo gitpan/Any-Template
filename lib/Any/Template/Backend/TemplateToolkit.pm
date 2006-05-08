@@ -7,13 +7,13 @@ use vars qw(@ISA);
 @ISA = qw(Any::Template::Backend);
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.6 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.7 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my ($class, $options) = @_;
 	my $self = bless {}, $class;
 	my $marshalled = $self->_marshall_options($options);
-	$self->{engine} = new Template(%$marshalled);
+	$self->{engine} = new Template($marshalled) or die($Template::ERROR);
 	return $self;		
 }
 
@@ -26,24 +26,24 @@ sub process_to_string {
 	my ($self, $data, $ref_buffer) = @_;
 	$$ref_buffer = '';
 	TRACE("Input", $self->{input});
-	$self->{engine}->process($self->{input}, $data, $ref_buffer) or die();
+	$self->{engine}->process($self->{input}, $data, $ref_buffer) or die($self->{engine}->error());
 }
 
 sub process_to_filehandle {
 	my ($self, $data, $fh) = @_;
 	TRACE("Input", $self->{input});
-	$self->{engine}->process($self->{input}, $data, $fh) or die();
+	$self->{engine}->process($self->{input}, $data, $fh) or die($self->{engine}->error());
 }
 
 sub process_to_file {
 	my ($self, $data, $filepath) = @_;
 	TRACE("Input", $self->{input});
-	$self->{engine}->process($self->{input}, $data, $filepath) or die();
+	$self->{engine}->process($self->{input}, $data, $filepath) or die($self->{engine}->error());
 }
 
 sub process_to_sub {
 	my ($self, $data, $coderef) = @_;
-	return $self->{engine}->process($self->{input}, $data, $coderef);
+	return $self->{engine}->process($self->{input}, $data, $coderef) or die($self->{engine}->error());
 }
 
 #
@@ -102,7 +102,7 @@ L<Any::Template>, L<Any::Template::Backend>, L<Template>
 
 =head1 VERSION
 
-$Revision: 1.6 $ on $Date: 2005/05/08 18:25:16 $ by $Author: johna $
+$Revision: 1.7 $ on $Date: 2005/11/24 22:07:55 $ by $Author: johna $
 
 =head1 AUTHOR
 

@@ -2,7 +2,7 @@
 # Purpose : Consistent interface to templating modules
 # Author  : John Alden
 # Created : Dec 2004
-# CVS     : $Header: /home/cvs/software/cvsroot/any_template/lib/Any/Template.pm,v 1.13 2005/07/21 12:18:40 piersk Exp $
+# CVS     : $Header: /home/cvs/software/cvsroot/any_template/lib/Any/Template.pm,v 1.15 2006/04/18 08:32:26 johna Exp $
 ###############################################################################
 
 package Any::Template;
@@ -13,7 +13,7 @@ use File::Spec;
 use File::Find;
 
 use vars qw($VERSION);
-$VERSION = sprintf"%d.%03d", q$Revision: 1.13 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.15 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my($class, $options) = @_;
@@ -35,7 +35,7 @@ sub new {
 	#Create object (containing backend)
 	my $self = {};
 	$self->{backend} = $backend->new($options);
-	DUMP($self);
+	DUMP({Level => 2}, "Any::Template object", $self);
 	return bless($self, $class);
 }
 
@@ -240,6 +240,10 @@ L<Cache> and L<Cache::Cache> offer a consistent interface to a number of differe
 
 =item *
 
+L<CGI::Application::Plugin::AnyTemplate>
+
+=item *
+
 L<Text::MicroMason>
 
 =item *
@@ -258,7 +262,7 @@ L<Text::Template>
 
 =head1 VERSION
 
-$Revision: 1.13 $ on $Date: 2005/07/21 12:18:40 $ by $Author: piersk $
+$Revision: 1.15 $ on $Date: 2006/04/18 08:32:26 $ by $Author: johna $
 
 =head1 AUTHOR
 
